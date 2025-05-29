@@ -6,7 +6,7 @@ import S3 from './S3';
  * 压缩图片为缩略图，返回缩略图的URL
  */
 export default async function generateThumbnail(
-  imageBuffer: ArrayBuffer,
+  imageBuffer: Buffer<ArrayBuffer> | ArrayBuffer,
   fileName: string,
   type: 'cover' | 'detail' | 'avatar' | 'background' | 'thumbnail_cover',
   returnObj = false
